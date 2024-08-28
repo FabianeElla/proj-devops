@@ -40,7 +40,7 @@ function App() {
       <form>
         <input onChange={handleChange} name="fName" placeholder="First Name" />
         <input onChange={handleChange} name="lName" placeholder="Last Name" />
-        <input onChange={handleChange} name="email" placeholder="Email" />
+        <input onChange={handleChange} name="email" placeholder="Email" type="email"/>
         <button>Submit</button>
       </form>
     </div>
