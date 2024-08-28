@@ -1,9 +1,17 @@
 ---
 name: Lint
 
-on: # yamllint disable-line rule:truthy
-  push: null
-  pull_request: null
+on:
+  push:
+    branches:
+      - main
+      - criacao-ci
+      - criacao-cd
+  pull_request:
+    branches:
+      - main
+      - criacao-ci
+      - criacao-cd
 
 permissions: {}
 
