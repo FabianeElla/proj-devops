@@ -15,5 +15,5 @@ jobs:
       - name: run install, build and test
         run: |
           npm install
-          npm run build  #compilar código
+          npm run build  
           npm run test
