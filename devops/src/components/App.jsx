@@ -11,7 +11,7 @@ function App() {
   function handleChange(event) {
     const { value, name } = event.target;
 
-    setContact((prevContact) => {
+    setContact((prevContact) => {  //guarda valor anterior
       if (name === "fName") {
         return {
           fName: value,
