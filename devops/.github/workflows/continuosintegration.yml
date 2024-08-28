@@ -1,29 +1,19 @@
-name: Continuos Integration-Lint
+name: Continuos Integration
 
-on: # yamllint disable-line rule:truthy
-  push: null
-  pull_request: null
-
-permissions: {}
+on: pull_request
 
 jobs:
-  build:
-    name: Lint
+  continuos-integration:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      packages: read
-      # To report GitHub Actions status checks
-      statuses: write
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
+      - name: Using Node.js
+        uses: actions/setup-node@v2
         with:
-          fetch-depth: 0
-
-      - name: Super-linter
-        uses: super-linter/super-linter@v7.0.0 # x-release-please-version
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          node-version: 18.
+      - name: run install, build and test
+        run: |
+          npm install
+          npm run build 
+          npm run test
