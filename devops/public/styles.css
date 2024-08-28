@@ -24,7 +24,7 @@
     font-size: 40px;
     font-weight: 200;
   }
-  
+
   input {
     border: 1px solid rgba(252, 252, 252, 0.4);
     background-color: rgba(252, 252, 252, 0.2);
@@ -40,6 +40,10 @@
     font-weight: 300;
   }
   
+  input:first-of-type {
+    margin-top: 20px;
+  }
+
   button {
     appearance: none;
     outline: 0;
@@ -50,5 +54,11 @@
     border-radius: 3px;
     width: 250px;
     font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  button:hover{
+    background-color: #225e5d;
   }
   
