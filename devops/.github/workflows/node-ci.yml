@@ -1,6 +1,6 @@
 name: Node version
 
-on: pull_request
+on: push
 
 jobs:
   first-job:
